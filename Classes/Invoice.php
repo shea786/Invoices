@@ -353,7 +353,7 @@ class Invoice
      * @param string $name
      *
      */
-    public function save($name = 'invoice.pdf')
+    public function saveGoogle($name = 'invoice.pdf')
     {
         $invoice = $this->generate();
 
