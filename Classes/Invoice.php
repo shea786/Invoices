@@ -346,6 +346,21 @@ class Invoice
     }
 
     /**
+     * Save the generated PDF to Google Drive.
+     *
+     * @method save
+     *
+     * @param string $name
+     *
+     */
+    public function save($name = 'invoice.pdf')
+    {
+        $invoice = $this->generate();
+
+        Storage::cloud($name, $invoice->pdf->output());
+    }
+
+    /**
      * Show the PDF in the browser.
      *
      * @method show
