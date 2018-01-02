@@ -357,7 +357,7 @@ class Invoice
     {
         $invoice = $this->generate();
 
-        Storage::cloud->put($name, $invoice->pdf->output());
+        Storage::cloud()->put($name, $invoice->pdf->output());
     }
 
     /**
